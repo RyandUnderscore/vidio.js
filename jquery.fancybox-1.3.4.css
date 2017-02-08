@@ -19,15 +19,16 @@
 	position: fixed;
 	top: 50%;
 	left: 50%;
-	margin-top: -21px;
-	margin-left: -21px;
-	width: 42px;
-	height: 42px;
-	background: url('../../images/fancybox/fancybox_loading.gif');
-	opacity: 0.8;
+	width: 40px;
+	height: 40px;
+	margin-top: -20px;
+	margin-left: -20px;
 	cursor: pointer;
-	z-index: 1010;
+	overflow: hidden;
+	z-index: 1104;
+	display: none;
 }
+
 #fancybox-loading div {
 	position: absolute;
 	top: 0;
@@ -41,38 +42,34 @@
 	position: absolute;
 	top: 0;
 	left: 0;
-	overflow: hidden;
+	width: 100%;
+	z-index: 1100;
 	display: none;
-	z-index: 1001;
-	background: #000;
 }
 
-
 #fancybox-tmp {
-	position: absolute;
-	top: -9999px;
-	left: -9999px;
 	padding: 0;
-	overflow: visible;
-	visibility: hidden;
+	margin: 0;
+	border: 0;
+	overflow: auto;
+	display: none;
 }
 
 #fancybox-wrap {
 	position: absolute;
 	top: 0;
 	left: 0;
-	z-index: 1002;
+	padding: 20px;
+	z-index: 1101;
+	outline: none;
+	display: none;
 }
 
 #fancybox-outer {
-	padding: 0;
-	margin: 0;
-	background: #f9f9f9;
-	color: #444;
-	text-shadow: none;
-	-webkit-border-radius: 4px;
-	   -moz-border-radius: 4px;
-			border-radius: 4px;
+	position: relative;
+	width: 100%;
+	height: 100%;
+	background: #fff;
 }
 
 #fancybox-content {
@@ -87,54 +84,57 @@
 }
 
 #fancybox-hide-sel-frame {
-display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
 	width: 100%;
 	height: 100%;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	vertical-align: top;
+	background: transparent;
+	z-index: 1101;
 }
 
 #fancybox-close {
 	position: absolute;
-	top: -18px;
-	right: -18px;
-	width: 36px;
-	height: 36px;
-	cursor: pointer;
-	z-index: 1004;
+	top: -15px;
+	right: -15px;
+	width: 30px;
+	height: 30px;
 	background: transparent url('http://4.bp.blogspot.com/-VKCy11jRJxM/VjD8IgBJaFI/AAAAAAAAAC8/gAvjKxMRV-8/s1600/fancybox.png') -40px 0px;
-	
+	cursor: pointer;
+	z-index: 1103;
+	display: none;
 }
 
 #fancybox-error {
-color: #444;
-    font: 14px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
-    margin: 0;
-    padding: 10px;
+	color: #444;
+	font: normal 12px/20px Arial;
+	padding: 14px;
+	margin: 0;
 }
 
 #fancybox-img {
-max-width: 100%;
-	max-height: 100%;
+	width: 100%;
+	height: 100%;
+	padding: 0;
+	margin: 0;
+	border: none;
+	outline: none;
+	line-height: 0;
+	vertical-align: top;
 }
 
 #fancybox-frame {
-display: block;
 	width: 100%;
 	height: 100%;
-	border: 0;
-	padding: 0;
-	margin: 0;
-	vertical-align: top;
+	border: none;
+	display: block;
 }
 
 #fancybox-left, #fancybox-right {
 	position: absolute;
 	bottom: 0px;
 	height: 100%;
-	width: 100%;
+	width: 35%;
 	cursor: pointer;
 	outline: none;
 	background: transparent url('http://4.bp.blogspot.com/-w4GZSyjlGCA/VjD8EX1RDQI/AAAAAAAAABU/j0nAJqYoJXc/s1600/blank.gif');
@@ -185,7 +185,7 @@ display: block;
 	right: 20px;
 }
 
-#fancybox-bg {
+.fancybox-bg {
 	position: absolute;
 	padding: 0;
 	margin: 0;
