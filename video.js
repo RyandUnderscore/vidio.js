@@ -7,7 +7,7 @@ jQuery(document).ready(function() {
 			'transitionIn'	: 'none',
 			'transitionOut'	: 'none',
 			'title'			: this.title,
-			'width'			: 640,
+			'width'			: 100%,
 			'height'		: 385,
 			'href'			: this.href.replace(new RegExp("watch\\?v=", "i"), 'v/'),
 			'type'			: 'swf',
